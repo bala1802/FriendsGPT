@@ -52,3 +52,7 @@ def train_model():
         optimizer.step()
     
     torch.save(model.state_dict(), "model/friendsGPT.pth")
+    print("Model Saved")
+
+if __name__ == "__main__":
+    train_model()
