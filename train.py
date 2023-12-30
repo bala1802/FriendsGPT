@@ -36,6 +36,7 @@ def train_model():
     optimizer = torch.optim.AdamW(model.parameters(), lr=config.learning_rate)
 
     for iter in range(config.max_iters):
+        print("Training Iteration : ", iter)
 
         # every once in a while evaluate the loss on train and val sets
         if iter % config.eval_interval == 0 or iter == config.max_iters - 1:

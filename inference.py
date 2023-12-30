@@ -4,8 +4,8 @@ import data_utils
 from gpt_language_model import GPTLanguageModel
 
 inference_model = GPTLanguageModel()
-# device = 'cuda' if torch.cuda.is_available() else 'cpu'
-device = "mps"
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+# device = "mps"
 
 inference_model.load_state_dict(torch.load('model/friendsGPT.pth', 
                                            map_location=torch.device('cpu')))
